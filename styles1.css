@@ -106,9 +106,9 @@ body{
     font-weight: bolder;
     letter-spacing: 5px;
     font-display: normal;
-    backdrop-filter: blur(10px);
+    text-shadow: white 2px 2px 5px;
     width: fit-content;
-    margin: auto;
+    margin: 2rem auto;
 }
 #prof{
     text-shadow: 0px 10px var(--shadow-color);
@@ -130,7 +130,7 @@ body{
 }
 .background-info p{
     font-weight: 900;
-    backdrop-filter: blur(14px);
+    text-shadow: white 2px 2px 5px;
 }
 
 .profile-flex{
@@ -296,7 +296,20 @@ nav{
     padding: 0 1rem;
     letter-spacing: 1px;
     animation: move-rtl 5000ms linear infinite;
-}@media (max-width: 500px) {
+}
+.reveal {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .reveal.appear {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+
+@media (max-width: 500px) {
  
     html{
         font-size:18px;
